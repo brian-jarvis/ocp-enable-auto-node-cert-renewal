@@ -17,8 +17,8 @@
 - name: Configure Node certificate renewal
   hosts: oo_first_master
   roles:
-    - role: /usr/share/ansible/openshift-ansible/roles/lib_utils
-    - role: /usr/share/ansible/openshift-ansible/roles/lib_openshift
+    - role: lib_utils
+    - role: lib_openshift
   tasks:
     - name: Include enable_bootstrap_config task file
       include_tasks: /usr/share/ansible/openshift-ansible/playbooks/openshift-master/private/tasks/enable_bootstrap_config.yml
